@@ -1,0 +1,171 @@
+@import url('//fonts.googleapis.com/css?family=Roboto:400,400italic,500,700|Playfair+Display:400,400italic,700,700italic|Montserrat:400|Karla:400');
+body {
+    font-family: Roboto;
+    font-size: 14px;
+    line-height: 1.666;
+    padding-top:70px;
+}
+.hidden {
+  display: none;
+}
+.button {
+    display: inline-block;
+    padding: 0 30px;
+    color: white;
+    text-align: center;
+    font-size: 0.85em;
+    font-weight: 600;
+    letter-spacing: .15rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 1px solid #3b3d38;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+.button.button-primary {
+    color: #fff;
+    background-color: #3b3d38;
+    border-color: #3b3d38;
+}
+.button.button-primary:hover {
+    color: #fff;
+    background-color: #52525b;
+    border-color: #52525b;
+}
+.button.button-secondary {
+    color: #1d1d20;
+    background-color: #fff;
+    border-color: #1d1d20;
+}
+.button.button-secondary:hover {
+    color: #fff;
+    background-color: #8e8e90;
+    border-color: #8e8e90;
+}
+.button.button-wide {
+    width: 100%;
+}
+.button.button-large {
+    padding: 19px 22px;
+}
+.modal {
+  display: block !important;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto !important;
+  border-radius: 0px;
+  border: none;
+  padding: 2.5%;
+  width: 80%;
+}
+.fa-star
+{
+  font-size: x-large;
+  margin: 2% 0;
+}
+.checked {
+  color: orange;
+}
+.accordion {
+  padding: 30px;
+}
+.accordion-btn {
+  cursor: pointer;
+  text-align: center;
+}
+.accordion-btn-el-active {
+  transform: rotate(45deg);
+}
+
+@media only screen
+    and (max-width: 375px) {
+  .social-container {
+      display: none;
+  }
+  .social-container-mobile{
+    display: block !important;
+  }
+  .btn-close
+  {
+    top:0% !important;
+  }
+  .product-details-button
+  {
+    text-align: center;
+  }
+  .product-title
+  {
+    display: none;
+  }
+  .product-title-mobile
+  {
+    display: block !important;
+  }
+  .product-price
+  {
+    display: none;
+  }
+  .product-price-mobile
+  {
+    display: block !important;
+  }
+  .product-rating
+  {
+    display: none;
+  }
+  .product-size
+  {
+    display: none;
+  }
+  .product-size-mobile
+  {
+    display: block !important;
+  }
+  .product-id
+  {
+    display: none;
+  }
+  .product-id-mobile
+  {
+    display: block !important;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px)  {
+  .product-description
+  {
+    display: none;
+  }
+  .product-description-tablet
+  {
+    display: block !important;
+  }
+  .product-size
+  {
+    display: none;
+  }
+  .product-size-tablet
+  {
+    display: block !important;
+  }
+  .product-title
+  {
+    display: none;
+  }
+  .product-title-mobile
+  {
+    display: block !important;
+  }
+}

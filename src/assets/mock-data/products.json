@@ -1,0 +1,59 @@
+[
+  {
+    "id": 701642853695,
+    "title": "Rajasthani Elephant",
+    "brand": "Solimo",
+    "price": 40,
+    "discount":2.5,
+    "rating":3,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at purus pulvinar, placerat turpis ac, interdum metus. In eget massa sed enim hendrerit auctor a eget.",
+    "image": "rajasthani-hathi.jpg"
+  },
+  {
+    "id": 701642853696,
+    "title": "Blue Tortoise Set",
+    "brand": "Kiriko",
+    "price": 28,
+    "rating":4,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at purus pulvinar, placerat turpis ac, interdum metus. In eget massa sed enim hendrerit auctor a eget arcu. Curabitur ac pharetra nisl, sit amet mattis dolor.",
+    "image": "blue-tortoise-set.jpg"
+  },
+  {
+    "id": 701642853697,
+    "title": "Recycled Iron Figure Easter Cat",
+    "brand": "Morgan & Stanley",
+    "price": 52,
+    "rating":5,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at purus pulvinar, placerat turpis ac, interdum metus. In eget massa sed enim hendrerit auctor a eget arcu. Curabitur ac pharetra nisl, sit amet mattis dolor.",
+    "image": "recycled-iron-figure.jpg"
+  },
+  {
+    "id": 701642853698,
+    "title": "Iron Wall Mirror",
+    "brand": "Blanche",
+    "price": 28,
+    "discount":5,
+    "rating":3,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at purus pulvinar, placerat turpis ac, interdum metus. In eget massa sed enim hendrerit auctor a eget.",
+    "image": "iron-mirror.jpg"
+  },
+  {
+    "id": 701642853699,
+    "title": "Recycled Iron Fish Figure Showpiece",
+    "brand": "Compiolance",
+    "price": 28,
+    "rating":3,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at purus pulvinar, placerat turpis ac, interdum metus. In eget massa sed enim hendrerit auctor a eget.",
+    "image": "recycled-iron-fish.jpg"
+  },
+  {
+    "id": 701642853676,
+    "title": "Curved Owl Wooden",
+    "brand": "Kiriko",
+    "price": 18,
+    "discount":2,
+    "rating":5,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at purus pulvinar, placerat turpis ac, interdum metus. In eget massa sed enim hendrerit auctor a eget.",
+    "image": "curved-owl-wooden.jpg"
+  }
+]
