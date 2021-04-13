@@ -47,8 +47,16 @@
   text-align: center;
   margin-top: 5%;
 }
+.product-rating-tablet {
+  display: none;
+  font-size: 3.5rem;
+  font-weight: 500;
+  text-align: left;
+  margin-top: -5%;
+  margin-bottom: 5%;
+}
 .product-size {
-  margin: 2% 0;
+  margin: -2% 0 4% 0;
 }
 .product-size-mobile{
   display: none;
@@ -58,7 +66,7 @@
 .product-size-tablet{
   display: none;
   text-align: left;
-  margin: 2% 0;
+  margin: 10% 0;
 }
 .prod-size-span {
   font-size: large;
@@ -117,9 +125,15 @@
   width: 40px;
   height: 40px;
 }
-.btn-size:hover,.btn-size:hover:active
+.btn-size:hover
 {
   background-color:#7B8093;
+  outline: none;
+}
+.btn-size:focus
+{
+  background-color:#7B8093;
+  outline: none;
 }
 .btn-close
 {

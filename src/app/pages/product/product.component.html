@@ -1,96 +1,129 @@
 <div *ngIf="product && showModal" class="modal product-page">
-    <div class="product-page-container modal-content">
-        <div class="row">
-          <button class="btn-close" (click)="showModal=false"><img src="../../../assets/images/close.png"/></button>
-            <div class="social-container">
-              <div class="accordion">
-                <div class="accordion-btn" (click)="toogleSocial()">
-                  <img [ngClass]="socialActive ? 'accordion-btn-el-active' : 'accordion-btn-el'" src="../../../assets/images/plus.png" />
-                </div>
-                <div [ngClass]="socialActive ? 'icon-box' : 'icon-box hidden'">
-                  <br/>
-                  <button class="btn-social"><img class="accordion-icons" src="../../../assets/images/facebook.png"/></button>
-                  <br/><br/>
-                  <button class="btn-social"><img class="accordion-icons" src="../../../assets/images/twitter.png"/></button>
-                  <br/><br/>
-                  <button class="btn-social"><img class="accordion-icons" src="../../../assets/images/pinterest.png"/></button>
-                  <br/><br/>
-                  <button class="btn-social"><img class="accordion-icons" src="../../../assets/images/youtube.png"/></button>
-                  <br/><br/>
-                  <button class="btn-social"><img class="accordion-icons" src="../../../assets/images/instagram.png"/></button>
-                </div>
-              </div>
-            </div>
-            <h1 class="product-title-mobile">{{product.title}}</h1>
-            <div class="product-id-mobile">Item # : {{product.id}}</div>
-            <div class="col-md-8">
-                <div class="product-details-image" [ngStyle]="{'background-image': 'url(./assets/images/' + product.image + ')'}"></div>
-            </div>
-            <div class="col-md-4">
-                <div class="product-details-row">
-                    <h1 class="product-title">{{product.title}}</h1>
-                    <div class="product-id">Item # : {{product.id}}</div>
-                    <div class="product-price">
-                      <span *ngIf="!product.discount">
-                        {{product.price | currency :'USD':true }}
-                      </span>
-                      <span *ngIf="product.discount">
-                        <span style="text-decoration: line-through;">{{product.price | currency :'USD':true }}</span>
-                        <span style="color: #CE2C52;">{{(product.price - (product.price*product.discount)/100) | currency :'USD':true }}</span>
-                      </span>
-                    </div>
-                    <div class="product-rating">
-                      <span *ngFor="let i of [].constructor(product.rating)" class="fa fa-star checked"></span>
-                      <span *ngFor="let i of [].constructor(5-product.rating)" class="fa fa-star"></span>
-                    </div>
-                    <div class="product-description">{{product.description}}</div>
-                    <div class="social-container-mobile">
-                      <button class="btn-social"><img class="accordion-icons" src="../../../assets/images/facebook.png"/></button>
-                      <button class="btn-social"><img class="accordion-icons" src="../../../assets/images/twitter.png"/></button>
-                      <button class="btn-social"><img class="accordion-icons" src="../../../assets/images/pinterest.png"/></button>
-                      <button class="btn-social"><img class="accordion-icons" src="../../../assets/images/youtube.png"/></button>
-                      <button class="btn-social"><img class="accordion-icons" src="../../../assets/images/instagram.png"/></button>
-                    </div>
-                    <div class="product-price-mobile">
-                      <span *ngIf="!product.discount">
-                        {{product.price | currency :'USD':true }}
-                      </span>
-                      <span *ngIf="product.discount">
-                        <span style="text-decoration: line-through;">{{product.price | currency :'USD':true }}</span>
-                        <span style="color: #CE2C52;">{{(product.price - (product.price*product.discount)/100) | currency :'USD':true }}</span>
-                      </span>
-                    </div>
-                    <div class="product-size">
-                      <span class="prod-size-span">SIZE :&nbsp;&nbsp;&nbsp;</span>
-                      <button class="btn-size">XL</button>
-                      <button class="btn-size">L</button>
-                      <button class="btn-size">M</button>
-                      <button class="btn-size">S</button>
-                    </div>
-                    <div class="product-size-mobile">
-                      <span class="prod-size-span">SELECT A SIZE:</span><br>
-                      <button class="btn-size">XL</button>
-                      <button class="btn-size">L</button>
-                      <button class="btn-size">M</button>
-                      <button class="btn-size">S</button>
-                    </div>
-                    <div class="product-size-tablet">
-                      <span class="prod-size-span">SELECT A SIZE:</span><br>
-                      <button class="btn-size">XL</button>
-                      <button class="btn-size">L</button>
-                      <button class="btn-size">M</button>
-                      <button class="btn-size">S</button>
-                    </div>
-                </div>
-                <div class="product-details-button">
-                    <div class="product-cart-button button button-primary button-large">Add to cart</div>
-                </div>
-            </div>
+  <div class="product-page-container modal-content">
+    <div class="row">
+      <!-- modal close button -->
+      <button class="btn-close" (click)="showModal=false"><img src="../../../assets/images/close.png" /></button>
+      <!-- social media links -->
+      <div class="social-container">
+        <div class="accordion">
+          <div class="accordion-btn" (click)="toogleSocial()">
+            <img [ngClass]="socialActive ? 'accordion-btn-el-active' : 'accordion-btn-el'"
+              src="../../../assets/images/plus.png" />
+          </div>
+          <div [ngClass]="socialActive ? 'icon-box' : 'icon-box hidden'">
+            <br />
+            <button class="btn-social"><img class="accordion-icons"
+                src="../../../assets/images/facebook.png" /></button>
+            <br /><br />
+            <button class="btn-social"><img class="accordion-icons" src="../../../assets/images/twitter.png" /></button>
+            <br /><br />
+            <button class="btn-social"><img class="accordion-icons"
+                src="../../../assets/images/pinterest.png" /></button>
+            <br /><br />
+            <button class="btn-social"><img class="accordion-icons" src="../../../assets/images/youtube.png" /></button>
+            <br /><br />
+            <button class="btn-social"><img class="accordion-icons"
+                src="../../../assets/images/instagram.png" /></button>
+          </div>
         </div>
-        <div class="product-description-tablet">
-          <span class="prod-details-span">Details:</span>
-          <br>
-          {{product.description}}
+      </div>
+      <!-- product title for mobile-->
+      <h1 class="product-title-mobile">{{product.title}}</h1>
+      <!-- product-id for mobile-->
+      <div class="product-id-mobile">Item # : {{product.id}}</div>
+      <!-- product image-->
+      <div class="col-md-8">
+        <div class="product-details-image"
+          [ngStyle]="{'background-image': 'url(./assets/images/' + product.image + ')'}"></div>
+      </div>
+      <!-- product details-->
+      <div class="col-md-4">
+        <div class="product-details-row">
+          <!-- product title -->
+          <h1 class="product-title">{{product.title}}</h1>
+          <!-- product-id -->
+          <div class="product-id">Item # : {{product.id}}</div>
+          <!-- product rating for tablet -->
+          <div class="product-rating-tablet">
+            <span *ngFor="let i of [].constructor(product.rating)" class="fa fa-star checked"></span>
+            <span *ngFor="let i of [].constructor(5-product.rating)" class="fa fa-star"></span>
+          </div>
+          <!-- product price -->
+          <div class="product-price">
+            <span *ngIf="!product.discount">
+              {{product.price | currency :'USD':true }}
+            </span>
+            <span *ngIf="product.discount">
+              <span style="text-decoration: line-through;">{{product.price | currency :'USD':true }}</span>
+              <span style="color: #CE2C52;">{{(product.price - (product.price*product.discount)/100) | currency
+                :'USD':true }}</span>
+            </span>
+          </div>
+          <!-- product discount -->
+          <div class="product-rating">
+            <span *ngFor="let i of [].constructor(product.rating)" class="fa fa-star checked"></span>
+            <span *ngFor="let i of [].constructor(5-product.rating)" class="fa fa-star"></span>
+          </div>
+          <!-- product description -->
+          <div class="product-description">{{product.description}}</div>
+          <!-- social media links for mobile-->
+          <div class="social-container-mobile">
+            <button class="btn-social"><img class="accordion-icons"
+                src="../../../assets/images/facebook.png" /></button>
+            <button class="btn-social"><img class="accordion-icons" src="../../../assets/images/twitter.png" /></button>
+            <button class="btn-social"><img class="accordion-icons"
+                src="../../../assets/images/pinterest.png" /></button>
+            <button class="btn-social"><img class="accordion-icons" src="../../../assets/images/youtube.png" /></button>
+            <button class="btn-social"><img class="accordion-icons"
+                src="../../../assets/images/instagram.png" /></button>
+          </div>
+          <!-- product price for mobile-->
+          <div class="product-price-mobile">
+            <span *ngIf="!product.discount">
+              {{product.price | currency :'USD':true }}
+            </span>
+            <span *ngIf="product.discount">
+              <span style="text-decoration: line-through;">{{product.price | currency :'USD':true }}</span>
+              <span style="color: #CE2C52;">{{(product.price - (product.price*product.discount)/100) | currency
+                :'USD':true }}</span>
+            </span>
+          </div>
+          <!-- product size -->
+          <div class="product-size">
+            <span class="prod-size-span">SIZE :&nbsp;&nbsp;&nbsp;</span>
+            <button class="btn-size">XL</button>
+            <button class="btn-size">L</button>
+            <button class="btn-size">M</button>
+            <button class="btn-size">S</button>
+          </div>
+          <!-- product size for mobile -->
+          <div class="product-size-mobile">
+            <span class="prod-size-span">SELECT A SIZE:</span><br>
+            <button class="btn-size">XL</button>
+            <button class="btn-size">L</button>
+            <button class="btn-size">M</button>
+            <button class="btn-size">S</button>
+          </div>
+          <!-- product size for tablet -->
+          <div class="product-size-tablet">
+            <span class="prod-size-span">SELECT A SIZE:</span><br>
+            <button class="btn-size">XL</button>
+            <button class="btn-size">L</button>
+            <button class="btn-size">M</button>
+            <button class="btn-size">S</button>
+          </div>
         </div>
+        <!-- button for ADD TO CART -->
+        <div class="product-details-button">
+          <div class="product-cart-button button button-primary button-large">Add to cart</div>
+        </div>
+      </div>
     </div>
+    <!-- product description for tablet -->
+    <div class="product-description-tablet">
+      <span class="prod-details-span">Details:</span>
+      <br>
+      {{product.description}}
+    </div>
+  </div>
 </div>

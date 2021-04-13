@@ -48,7 +48,7 @@ body {
     width: 100%;
 }
 .button.button-large {
-    padding: 19px 22px;
+    padding: 15px 45px;
 }
 .modal {
   display: block !important;
@@ -88,7 +88,7 @@ body {
 .accordion-btn-el-active {
   transform: rotate(45deg);
 }
-
+/* styles for iPhone11 Pro */
 @media only screen
     and (max-width: 375px) {
   .social-container {
@@ -96,6 +96,10 @@ body {
   }
   .social-container-mobile{
     display: block !important;
+  }
+  .btn-size
+  {
+    margin-right: 4.5% !important;
   }
   .btn-close
   {
@@ -112,6 +116,7 @@ body {
   .product-title-mobile
   {
     display: block !important;
+    margin:15% 2% 2% 0% !important;
   }
   .product-price
   {
@@ -142,7 +147,7 @@ body {
     display: block !important;
   }
 }
-
+/* styles for iPad Pro 11*/
 @media only screen and (min-width: 768px) and (max-width: 1024px)  {
   .product-description
   {
@@ -156,6 +161,14 @@ body {
   {
     display: none;
   }
+  .product-rating-tablet
+  {
+    display: block !important;
+  }
+  .product-rating
+  {
+    display: none;
+  }
   .product-size-tablet
   {
     display: block !important;
@@ -165,6 +178,14 @@ body {
     display: none;
   }
   .product-title-mobile
+  {
+    display: block !important;
+  }
+  .accordion-btn
+  {
+    display: none;
+  }
+  .icon-box
   {
     display: block !important;
   }
