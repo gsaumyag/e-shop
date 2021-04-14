@@ -103,7 +103,8 @@ body {
   }
   .btn-close
   {
-    top:0% !important;
+    top: 1.15% !important;
+    right: 3% !important;
   }
   .product-details-button
   {
