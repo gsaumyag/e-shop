@@ -13,6 +13,7 @@ export class CategoryComponent implements OnInit {
     public productID:number;
     public products:Array<Product>;
     public displayProduct:boolean = false;
+    public productIDJSON:{} = {productID : -1, randomNO : 949};
 
     constructor(private productService:ProductService) { }
 
@@ -21,7 +22,15 @@ export class CategoryComponent implements OnInit {
       .subscribe(res => {
           this.products = res;
       })
+
+      document.addEventListener("touchstart", function() {}, true);
+
     };
+
+    setProdID(i)
+    {
+      this.productIDJSON = {productID : i, randomNO : Math.floor(Math.random() * 949) + 1  };
+    }
 
     ngOnDestroy() {
         this.sub.unsubscribe();

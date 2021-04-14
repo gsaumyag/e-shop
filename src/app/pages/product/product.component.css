@@ -125,14 +125,16 @@
   width: 40px;
   height: 40px;
 }
-.btn-size:hover
+.btn-size.selected
 {
   background-color:#7B8093;
+}
+.btn-size:hover
+{
   outline: none;
 }
 .btn-size:focus
 {
-  background-color:#7B8093;
   outline: none;
 }
 .btn-close

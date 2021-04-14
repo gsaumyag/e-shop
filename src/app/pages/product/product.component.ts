@@ -1,4 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+import {Renderer2} from '@angular/core';
+
 import { ProductService } from "../../services/products.service";
 import { Product } from "../../model/product";
 
@@ -16,7 +18,7 @@ export class ProductComponent implements OnInit {
     private sub;
     @Input() set productID(value)
     {
-      this.prodID = value;
+      this.prodID = value.productID;
       this.sub = this.productService.getProducts('./assets/mock-data/products.json')
       .subscribe(res => {
           this.product = res[this.prodID];
@@ -24,9 +26,17 @@ export class ProductComponent implements OnInit {
       this.showModal = true;
     };
 
-    constructor(private productService:ProductService) { }
+    constructor(private productService:ProductService,private render:Renderer2) { }
 
     ngOnInit(){}
+
+    selectBtn(event:any){
+      Array.from(document.querySelectorAll(".btn-size")).forEach((elem)=>
+      {
+        elem.classList.remove("selected");
+      })
+      this.render.addClass(event.target,"selected");
+    }
 
     toogleSocial()
     {

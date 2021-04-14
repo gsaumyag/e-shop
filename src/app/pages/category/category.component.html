@@ -1,10 +1,10 @@
 <div class="layout-container">
     <div class="product-grid">
         <div class="col-md-4 col-sm-6" *ngFor="let product of products;let i = index">
-            <div class="image-container">
+            <div class="image-container" id="image-container-basic" onclick="void(0)">
                 <div class="product-image" [ngStyle]="{'background-image': 'url(./assets/images/' + product.image + ')'}"></div>
                 <div class="overlay">
-                    <div class="button button-primary" (click)="productID=i;">Show More</div>
+                    <div class="button button-primary" (click)="setProdID(i)">Show More</div>
                 </div>
                 <div class="product-price"><span *ngIf="!product.discount">
                   {{product.price | currency :'USD':true }}
@@ -20,5 +20,5 @@
             </div>
         </div>
     </div>
-    <app-product [productID]="productID"></app-product>
+    <app-product [productID]="productIDJSON"></app-product>
 </div>

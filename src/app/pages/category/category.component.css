@@ -20,13 +20,25 @@
 .image-container {
     position: relative;
 }
-.image-container:hover .product-image{
+.image-container:hover .product-image,.image-container:focus .product-image, .image-container:active .product-image{
     opacity: 0.3;
     background-size:120%;
 }
-.image-container:hover .overlay,.image-container:active .overlay{
+.image-container:hover .overlay,.image-container:focus .overlay,.image-container:active .overlay{
     opacity: 1;
 }
+
+@media(hover: hover) and (pointer: fine)
+{
+  .image-container:hover .product-image,.image-container:focus .product-image, .image-container:active .product-image{
+      opacity: 0.3;
+      background-size:120%;
+  }
+  .image-container:hover .overlay,.image-container:focus .overlay,.image-container:active .overlay{
+      opacity: 1;
+  }
+}
+
 .overlay {
     transition: .5s ease;
     opacity: 0;
